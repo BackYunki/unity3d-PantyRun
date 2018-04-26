@@ -1,28 +1,23 @@
 fileFormatVersion: 2
-guid: c3714996bcb764045ba3ddd34217cb8b
-timeCreated: 1523566677
+guid: 40a102b8a795a9b46a21b46e5ddb7f13
+timeCreated: 1524653654
 licenseType: Free
 ModelImporter:
   serializedVersion: 22
   fileIDToRecycleName:
-    100000: Case
-    100002: Door
+    100000: Box074
+    100002: Cylinder001
     100004: //RootNode
-    100006: Window
-    400000: Case
-    400002: Door
+    400000: Box074
+    400002: Cylinder001
     400004: //RootNode
-    400006: Window
     2100000: No Name
-    2300000: Case
-    2300002: Door
-    2300004: Window
-    3300000: Case
-    3300002: Door
-    3300004: Window
-    4300000: Case
-    4300002: Door
-    4300004: Window
+    2300000: Box074
+    2300002: Cylinder001
+    3300000: Box074
+    3300002: Cylinder001
+    4300000: Cylinder001
+    4300002: Box074
     9500000: //RootNode
   externalObjects: {}
   materials:
