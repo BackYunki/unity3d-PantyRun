@@ -1,0 +1,187 @@
+fileFormatVersion: 2
+guid: 4cf6429c8268a454995930254e51d6db
+timeCreated: 1510447047
+licenseType: Store
+ModelImporter:
+  serializedVersion: 21
+  fileIDToRecycleName:
+    100000: Cabin
+    100002: Collective_Copilot
+    100004: Collective_Pilot
+    100006: Cube
+    100008: Cube.001
+    100010: Cube.002
+    100012: Cube.003
+    100014: Cyclic_Copilot
+    100016: Cyclic_Pilot
+    100018: Cylinder
+    100020: Floor
+    100022: Glareshield
+    100024: //RootNode
+    100026: MIP
+    100028: Overhead
+    100030: Pedals_Left
+    100032: Pedals_Right
+    100034: Pedestal
+    100036: Rotor Brake
+    100038: Seats
+    100040: Sun
+    100042: Windows
+    400000: Cabin
+    400002: Collective_Copilot
+    400004: Collective_Pilot
+    400006: Cube
+    400008: Cube.001
+    400010: Cube.002
+    400012: Cube.003
+    400014: Cyclic_Copilot
+    400016: Cyclic_Pilot
+    400018: Cylinder
+    400020: Floor
+    400022: Glareshield
+    400024: //RootNode
+    400026: MIP
+    400028: Overhead
+    400030: Pedals_Left
+    400032: Pedals_Right
+    400034: Pedestal
+    400036: Rotor Brake
+    400038: Seats
+    400040: Sun
+    400042: Windows
+    2300000: Cabin
+    2300002: Collective_Copilot
+    2300004: Collective_Pilot
+    2300006: Cube
+    2300008: Cube.001
+    2300010: Cube.002
+    2300012: Cube.003
+    2300014: Cyclic_Copilot
+    2300016: Cyclic_Pilot
+    2300018: Cylinder
+    2300020: Floor
+    2300022: Glareshield
+    2300024: MIP
+    2300026: Overhead
+    2300028: Pedals_Left
+    2300030: Pedals_Right
+    2300032: Pedestal
+    2300034: Rotor Brake
+    2300036: Seats
+    2300038: Windows
+    3300000: Cabin
+    3300002: Collective_Copilot
+    3300004: Collective_Pilot
+    3300006: Cube
+    3300008: Cube.001
+    3300010: Cube.002
+    3300012: Cube.003
+    3300014: Cyclic_Copilot
+    3300016: Cyclic_Pilot
+    3300018: Cylinder
+    3300020: Floor
+    3300022: Glareshield
+    3300024: MIP
+    3300026: Overhead
+    3300028: Pedals_Left
+    3300030: Pedals_Right
+    3300032: Pedestal
+    3300034: Rotor Brake
+    3300036: Seats
+    3300038: Windows
+    4300000: Cyclic_Copilot
+    4300002: Cube.003
+    4300004: Cube.002
+    4300006: Cyclic_Pilot
+    4300008: Cube.001
+    4300010: Collective_Copilot
+    4300012: Collective_Pilot
+    4300014: Cube
+    4300016: Pedals_Right
+    4300018: Pedals_Left
+    4300020: Rotor Brake
+    4300022: Overhead
+    4300024: Seats
+    4300026: Pedestal
+    4300028: Glareshield
+    4300030: MIP
+    4300032: Cylinder
+    4300034: Floor
+    4300036: Windows
+    4300038: Cabin
+    10800000: Sun
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
