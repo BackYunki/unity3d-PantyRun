@@ -51,7 +51,7 @@ namespace HeliSimPack.HelicopterSimulation
       if (null != rotorSound)
       {
         float rotorPitch = rotorRotator.getRotorSpeed() / 100.0f;
-        float rotorVolume = Mathf.Max(0, rotorRotator.getRotorSpeed() / 100.0f - 0.4f) * (1.0f / (1.0f - 0.4f));
+        float rotorVolume = Mathf.Max(0, rotorRotator.getRotorSpeed() / 100.0f - 0.4f) ;
 
         rotorSound.pitch = rotorPitch;
         rotorSound.volume = rotorVolume;
