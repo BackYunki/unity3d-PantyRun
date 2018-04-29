@@ -47,8 +47,9 @@ public class BasicBehaviour : NetworkBehaviour
 
 	void Awake ()
 	{
-        // Set up the references.
-        behaviours = new List<GenericBehaviour> ();
+
+		// Set up the references.
+		behaviours = new List<GenericBehaviour> ();
 		overridingBehaviours = new List<GenericBehaviour>();
 		anim = GetComponent<Animator> ();
 		hFloat = Animator.StringToHash("H");
