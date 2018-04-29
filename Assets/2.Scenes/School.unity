@@ -7891,6 +7891,22 @@ Prefab:
       propertyPath: m_StaticEditorFlags
       value: 8
       objectReference: {fileID: 0}
+    - target: {fileID: 1169502534693684, guid: 824c8e64444e31d4492b8d5432b6b00f, type: 2}
+      propertyPath: m_Name
+      value: SideDoor Left1_L
+      objectReference: {fileID: 0}
+    - target: {fileID: 1912870879955438, guid: 824c8e64444e31d4492b8d5432b6b00f, type: 2}
+      propertyPath: m_Name
+      value: SideDoor Left1_R
+      objectReference: {fileID: 0}
+    - target: {fileID: 1956875558690960, guid: 824c8e64444e31d4492b8d5432b6b00f, type: 2}
+      propertyPath: m_Name
+      value: SideDoor Right2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1491687848060498, guid: 824c8e64444e31d4492b8d5432b6b00f, type: 2}
+      propertyPath: m_Name
+      value: SideDoor Left2
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 82518994930679206, guid: 824c8e64444e31d4492b8d5432b6b00f, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: 824c8e64444e31d4492b8d5432b6b00f, type: 2}
