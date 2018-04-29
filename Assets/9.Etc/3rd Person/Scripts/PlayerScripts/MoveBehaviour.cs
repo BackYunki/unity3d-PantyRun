@@ -1,9 +1,23 @@
 ﻿using UnityEngine;
+using UnityEngine.Networking;
+
+class LocalSetup : NetworkBehaviour
+{
+    public void ls()
+    {
+        if(!isLocalPlayer)
+        {
+            return;
+        }
+    }
+}
 
 // MoveBehaviour inherits from GenericBehaviour. This class corresponds to basic walk and run behaviour, it is the default behaviour.
 public class MoveBehaviour : GenericBehaviour
 {
-	public float walkSpeed = 0.15f;                 // Default walk speed.
+    private LocalSetup localSetup;
+
+    public float walkSpeed = 0.15f;                 // Default walk speed.
 	public float runSpeed = 1.0f;                   // Default run speed.
 	public float sprintSpeed = 2.0f;                // Default sprint speed.
 	public float speedDampTime = 0.1f;              // Default damp time to change the animations based on current speed.
@@ -20,8 +34,10 @@ public class MoveBehaviour : GenericBehaviour
 	// Start is always called after any Awake functions.
 	void Start() 
 	{
-		// Set up the references.
-		jumpBool = Animator.StringToHash("Jump");
+        localSetup = gameObject.AddComponent<LocalSetup>();
+        localSetup.ls();
+        // Set up the references.
+        jumpBool = Animator.StringToHash("Jump");
 		groundedBool = Animator.StringToHash("Grounded");
 		behaviourManager.GetAnim.SetBool (groundedBool, true);
 
@@ -34,6 +50,7 @@ public class MoveBehaviour : GenericBehaviour
 	// Update is used to set features regardless the active behaviour.
 	void Update ()
 	{
+        localSetup.ls();
 		// Get jump input.
 		if (!jump && Input.GetButtonDown(jumpButton) && behaviourManager.IsCurrentBehaviour(this.behaviourCode) && !behaviourManager.IsOverriding())
 		{
@@ -44,8 +61,9 @@ public class MoveBehaviour : GenericBehaviour
 	// LocalFixedUpdate overrides the virtual function of the base class.
 	public override void LocalFixedUpdate()
 	{
-		// Call the basic movement manager.
-		MovementManagement(behaviourManager.GetH, behaviourManager.GetV);
+        localSetup.ls();
+        // Call the basic movement manager.
+        MovementManagement(behaviourManager.GetH, behaviourManager.GetV);
 
 		// Call the jump manager.
 		JumpManagement();
@@ -54,8 +72,9 @@ public class MoveBehaviour : GenericBehaviour
 	// Execute the idle and walk/run jump movements.
 	void JumpManagement()
 	{
-		// Start a new jump.
-		if (jump && !behaviourManager.GetAnim.GetBool(jumpBool) && behaviourManager.IsGrounded())
+        localSetup.ls();
+        // Start a new jump.
+        if (jump && !behaviourManager.GetAnim.GetBool(jumpBool) && behaviourManager.IsGrounded())
 		{
 			// Set jump related parameters.
 			behaviourManager.LockTempBehaviour(this.behaviourCode);
@@ -75,8 +94,9 @@ public class MoveBehaviour : GenericBehaviour
 		// Is already jumping?
 		else if (behaviourManager.GetAnim.GetBool(jumpBool))
 		{
-			// Keep forward movement while in the air.
-			if (!behaviourManager.IsGrounded() && !isColliding && behaviourManager.GetTempLockStatus())
+            localSetup.ls();
+            // Keep forward movement while in the air.
+            if (!behaviourManager.IsGrounded() && !isColliding && behaviourManager.GetTempLockStatus())
 			{
 				behaviourManager.GetRigidBody.AddForce(transform.forward * jumpIntertialForce * Physics.gravity.magnitude * sprintSpeed, ForceMode.Acceleration);
 			}
@@ -98,8 +118,9 @@ public class MoveBehaviour : GenericBehaviour
 	// Deal with the basic player movement
 	void MovementManagement(float horizontal, float vertical)
 	{
-		// On ground, obey gravity.
-		if (behaviourManager.IsGrounded())
+        localSetup.ls();
+        // On ground, obey gravity.
+        if (behaviourManager.IsGrounded())
 			behaviourManager.GetRigidBody.useGravity = true;
 
 		// Call function that deals with player orientation.
@@ -123,8 +144,9 @@ public class MoveBehaviour : GenericBehaviour
 	// Rotate the player to match correct orientation, according to camera and key pressed.
 	Vector3 Rotating(float horizontal, float vertical)
 	{
-		// Get camera forward direction, without vertical component.
-		Vector3 forward = behaviourManager.playerCamera.TransformDirection(Vector3.forward);
+        localSetup.ls();
+        // Get camera forward direction, without vertical component.
+        Vector3 forward = behaviourManager.playerCamera.TransformDirection(Vector3.forward);
 
 		// Player is moving on ground, Y component of camera facing is not relevant.
 		forward.y = 0.0f;
@@ -156,10 +178,12 @@ public class MoveBehaviour : GenericBehaviour
 	// Collision detection.
 	private void OnCollisionStay(Collision collision)
 	{
-		isColliding = true;
+        localSetup.ls();
+        isColliding = true;
 	}
 	private void OnCollisionExit(Collision collision)
 	{
-		isColliding = false;
+        localSetup.ls();
+        isColliding = false;
 	}
 }

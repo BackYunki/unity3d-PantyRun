@@ -1,8 +1,9 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Networking;
 
-public class OpenBehavior : MonoBehaviour
+public class OpenBehavior : NetworkBehaviour
 {
 
     private Animator _animator;
@@ -29,23 +30,21 @@ public class OpenBehavior : MonoBehaviour
 
     void OnTriggerExit(Collider col)
     {
-        if(col.tag == "Player")
+        if (col.tag == "Player")
         {
             isEnter = false;
         }
     }
 
-    // Update is called once per frame
     void Update()
     {
-        if ( isEnter && Input.GetKeyDown("f") )
+        if (isEnter && Input.GetKeyDown("f"))
         {
             isOpen = !isOpen;   // 누를 때마다 상태를 바꾸는 거당
             if (isOpen)
             {
                 _animator.SetBool("isOpen", true);
                 audio.PlayOneShot(openSfx);
-                
             }
             else
             {

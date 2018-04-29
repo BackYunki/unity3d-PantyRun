@@ -1896,7 +1896,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4835355432525288}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4162250410548718
 Transform:
@@ -2164,7 +2164,7 @@ Transform:
   m_Children:
   - {fileID: 4698442374071550}
   m_Father: {fileID: 4835355432525288}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4318411133554466
 Transform:
@@ -2389,7 +2389,7 @@ Transform:
   m_Children:
   - {fileID: 4198198159421796}
   m_Father: {fileID: 4835355432525288}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4470006887391036
 Transform:
@@ -2415,7 +2415,7 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1935765831229828}
-  m_LocalRotation: {x: -0.005911422, y: -0.67944837, z: 0.7336993, w: -0.00066563475}
+  m_LocalRotation: {x: -0.0059114206, y: -0.67944837, z: 0.7336993, w: -0.00066563475}
   m_LocalPosition: {x: -0.14276123, y: 0.032653574, z: 0.13977996}
   m_LocalScale: {x: 1.0000001, y: 1.0000001, z: 1.0000001}
   m_Children: []
@@ -2572,7 +2572,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4835355432525288}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4623582486173636
 Transform:
@@ -3015,11 +3015,11 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
+  - {fileID: 4981074116891506}
   - {fileID: 4306973436495340}
   - {fileID: 4609793362747018}
   - {fileID: 4469701443696790}
   - {fileID: 4157810019074774}
-  - {fileID: 4981074116891506}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -3213,7 +3213,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4835355432525288}
-  m_RootOrder: 4
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4981545370811192
 Transform:
@@ -3293,7 +3293,7 @@ Camera:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1486619083133958}
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
   m_ClearFlags: 1
   m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
@@ -3731,6 +3731,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 24d1932814ff4b14281b9e805ea6cba5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  toggleSfx: {fileID: 0}
 --- !u!124 &124751181494463972
 Behaviour:
   m_ObjectHideFlags: 1

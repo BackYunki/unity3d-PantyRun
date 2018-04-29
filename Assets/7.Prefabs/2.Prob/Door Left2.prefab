@@ -23,6 +23,8 @@ GameObject:
   - component: {fileID: 65611588521204740}
   - component: {fileID: 82221999635433480}
   - component: {fileID: 114915557038874928}
+  - component: {fileID: 114736743262366776}
+  - component: {fileID: 114367622567192330}
   m_Layer: 0
   m_Name: Door Left2
   m_TagString: Untagged
@@ -597,6 +599,59 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &114367622567192330
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1097804036710238}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -1768714887, guid: dc443db3e92b4983b9738c1131f555cb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_TransformSyncMode: 1
+  m_SendInterval: 0.1
+  m_SyncRotationAxis: 7
+  m_RotationSyncCompression: 0
+  m_SyncSpin: 0
+  m_MovementTheshold: 0.001
+  m_VelocityThreshold: 0.0001
+  m_SnapThreshold: 5
+  m_InterpolateRotation: 1
+  m_InterpolateMovement: 1
+--- !u!114 &114736743262366776
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1097804036710238}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 372142912, guid: dc443db3e92b4983b9738c1131f555cb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_SceneId:
+    m_Value: 0
+  m_AssetId:
+    i0: 138
+    i1: 2
+    i2: 23
+    i3: 23
+    i4: 112
+    i5: 237
+    i6: 102
+    i7: 20
+    i8: 234
+    i9: 214
+    i10: 186
+    i11: 133
+    i12: 5
+    i13: 62
+    i14: 13
+    i15: 62
+  m_ServerOnly: 0
+  m_LocalPlayerAuthority: 0
 --- !u!114 &114915557038874928
 MonoBehaviour:
   m_ObjectHideFlags: 1

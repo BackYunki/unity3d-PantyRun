@@ -6,10 +6,18 @@ using UnityEngine.Networking;
 public class LanternBehavior : NetworkBehaviour {
 
     private bool isActive = false;
-	
+    public AudioClip toggleSfx;
+
     void Start()
     {
-
+        if(isLocalPlayer)
+        {
+            this.gameObject.GetComponentInChildren<Camera>().enabled = true;
+        }
+        else
+        {
+            this.gameObject.GetComponentInChildren<Camera>().enabled = false;
+        }
     }
 
 	// Update is called once per frame
