@@ -371,19 +371,11 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4519125727721332}
-  - component: {fileID: 114860626604839258}
   - component: {fileID: 54941034924104032}
-  - component: {fileID: 114365327566099462}
   - component: {fileID: 114833371774629646}
   - component: {fileID: 114785192182664250}
   - component: {fileID: 114050834772378412}
   - component: {fileID: 114155126308717566}
-  - component: {fileID: 114806307461578060}
-  - component: {fileID: 114788223107609338}
-  - component: {fileID: 114615332101594512}
-  - component: {fileID: 114899107313266888}
-  - component: {fileID: 114805991397985966}
-  - component: {fileID: 114240084198217700}
   m_Layer: 9
   m_Name: Helicopter_Demo
   m_TagString: Untagged
@@ -1549,7 +1541,7 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1251720728617576}
-  m_LocalRotation: {x: -0.65328157, y: -0.27059805, z: -0.27059808, w: 0.65328133}
+  m_LocalRotation: {x: -0.609887, y: 0.35782537, z: 0.3578234, w: 0.6098862}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -2371,7 +2363,7 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1026980977250590}
-  m_LocalRotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071067}
+  m_LocalRotation: {x: 0.3181281, y: 0, z: 0, w: -0.94804776}
   m_LocalPosition: {x: -7.342833e-10, y: 0.37248257, z: -9.726835}
   m_LocalScale: {x: 100, y: 100, z: 100}
   m_Children:
@@ -2823,8 +2815,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1660895560520488}
-  m_LocalRotation: {x: 0.16728498, y: -0, z: -0, w: 0.9859086}
-  m_LocalPosition: {x: 0, y: 9.600001, z: -26.470005}
+  m_LocalRotation: {x: -0.13870119, y: 0.000000029802322, z: 0.0000000018626451, w: -0.99033433}
+  m_LocalPosition: {x: -0.0000009536743, y: 7.99, z: -32.380005}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4251395497465208}
@@ -5224,8 +5216,8 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 15152ae5b90f13e4da2d429fc7334cce, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 0.231
-  m_Pitch: 1
+  m_Volume: 0.5999965
+  m_Pitch: 0.9999965
   Loop: 1
   Mute: 0
   Spatialize: 0
@@ -5304,8 +5296,8 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 1f5a886e771e12a43b07dd7eeb23b8a8, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 0.17
-  m_Pitch: 1
+  m_Volume: 0.9999962
+  m_Pitch: 0.9999981
   Loop: 1
   Mute: 0
   Spatialize: 0
@@ -5435,23 +5427,6 @@ MonoBehaviour:
   engineSpeedDamping: 1
   engineRunningAtLoad: 1
   timeForFullEngineSpeed: 30
---- !u!114 &114240084198217700
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1168286616459354}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7ac0253f6196145489ed124b68fc855e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  comment: Camera switcher
-  objects:
-  - {fileID: 1660895560520488}
-  - {fileID: 0}
-  selectionAtLoad: 0
-  switchKey: 99
 --- !u!114 &114278881518832848
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -5490,54 +5465,6 @@ MonoBehaviour:
   swayXMultiplier: 1
   swayYMultiplier: 0.5
   swayFrequency: 10
---- !u!114 &114365327566099462
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1168286616459354}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4475a90a4bd45f243b039cf570db816d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  emptyWeight: 3208
-  dragInfoFront:
-    dragCoefficient: 0.15
-    sectionArea: 12.5
-  dragInfoSide:
-    dragCoefficient: 0.47
-    sectionArea: 40.4
-  dragInfoTop:
-    dragCoefficient: 4
-    sectionArea: 30.75
-  dragInfoTail:
-    dragCoefficient: 0.8
-    sectionArea: 2
-  angularDrag: 2
-  inertiaTensor: {x: 10000, y: 10000, z: 10000}
-  inertiaTensorRotation: {x: 0, y: 0, z: 0, w: 1}
-  interpolation: 2
-  collisionDetection: 0
-  emptyCenterOfMass: {fileID: 4559227759335124}
-  pilotPosition: {fileID: 4551280675447250}
-  pilotWeight: 175
-  copilotPosition: {fileID: 4362390823934216}
-  copilotWeight: 175
-  cargoPosition: {fileID: 4015966797629306}
-  cargoWeight: 500
---- !u!114 &114615332101594512
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1168286616459354}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8c8c3f1e5ff560041904618a9fbfffc8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  distanceToReachWayoint: 0.1
 --- !u!114 &114785192182664250
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -5557,100 +5484,6 @@ MonoBehaviour:
   hundredPercentTailRotorSpeed: -500
   rotorSpeedIncreadingDamping: 1
   rotorSpeedDecreasingDamping: 0.1
---- !u!114 &114788223107609338
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1168286616459354}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6a7a960f462967141822322fa8deb3c6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  leftPedals:
-  - {fileID: 4237298322215098}
-  rightPedals:
-  - {fileID: 4244215813369078}
-  cyclicSticks:
-  - {fileID: 4470184188781556}
-  - {fileID: 4194553044367194}
-  collectiveLevers:
-  - {fileID: 4181036627193876}
-  maximumCyclicXRotation: 7
-  maximumCyclicYRotation: 10
-  maximumCollectiveRotation: 7
-  maximumPedalsRotation: 30
-  collectiveAxis: Collective
-  cyclicXAxis: Cyclic X
-  cyclicYAxis: Cyclic Y
-  pedalsAxis: Pedals
---- !u!114 &114805991397985966
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1168286616459354}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cd433675671717f4e908729c4f88c921, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  isEnabledAtStart: 0
-  highDensityRed: {r: 0.9294, g: 0.1176, b: 0.1412, a: 1}
-  highDensityYellow: {r: 0.949, g: 0.4353, b: 0.0549, a: 1}
-  lowDensityYellow: {r: 0.7216, g: 0.702, b: 0, a: 1}
-  highDensityGreen: {r: 0.4039, g: 0.6471, b: 0.1804, a: 1}
-  lowDensityGreen: {r: 0, g: 0, b: 0, a: 1}
-  waterBlue: {r: 0, g: 0, b: 0.7412, a: 1}
-  highDensityRedLowerBoundary: 250
-  highDensityYellowLowerBoundary: 0
-  lowDensityYellowLowerBoundary: -250
-  highDensityGreenLowerBoundary: -500
-  lowDensityGreenLowerBoundary: -1000
-  isWaterShownBlue: 1
-  refreshPeriod: 1
-  radiusInPixels: 20
-  filterMode: 1
-  maximumTerrainHeight: 2200
-  terrainLayers:
-    serializedVersion: 2
-    m_Bits: 2048
---- !u!114 &114806307461578060
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1168286616459354}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5d23f0f029d84ad40b99740e1e45177f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  mainRotorTransform: {fileID: 4047283043233186}
-  mainRotorDiameter: 10.2
-  tailRotorTransform: {fileID: 4640339379304966}
-  liftCyclicPercentage: 50
-  minimumLift: 13000
-  maximumLift: 26500
-  collectiveDamping: 1
-  maximumTailRotorForce: 1000
-  rotorTorqueSimulated: 1
-  maxRotorTorque: 250
-  pendulumEffectFactor: 0.25
-  rotorSpeedChangeFactor: 0.2
-  rotorSpeedDamping: 1
-  groundEffectParameters:
-    a: 47.851547
-    b: -4.2667
-  terrainLayers:
-    serializedVersion: 2
-    m_Bits: 2049
-  vrsParameters:
-    verticalSpeed: -700
-    horizontalSpeed: 30
-    E2: 0.75
-    E4: 0.5
 --- !u!114 &114833371774629646
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -5662,38 +5495,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: af98d0aa8b0f93f4abaccb20ddc6af2a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &114860626604839258
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1168286616459354}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ca5a1ea9de38a364198ab9bfbedaf221, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &114899107313266888
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1168286616459354}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bdda0498e44ab2b4d80b01dabe5e75fc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  availableRanges:
-  - 0.1
-  - 0.5
-  - 1
-  - 2.5
-  - 5
-  - 10
-  defaultRange: 1
-  increaseRangeKey: 270
-  decreaseRangeKey: 269
 --- !u!120 &120312027661937950
 LineRenderer:
   m_ObjectHideFlags: 1

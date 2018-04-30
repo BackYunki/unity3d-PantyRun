@@ -4,17 +4,7 @@ using UnityEngine;
 
 namespace HeliSimPack
 {
-  [RequireComponent(typeof(Rigidbody))]
-  [RequireComponent(typeof(HelicopterSimulation.RigidBodyController))]
-  [RequireComponent(typeof(HelicopterSimulation.SoundController))]
-  [RequireComponent(typeof(HelicopterSimulation.RotorRotator))]
-  [RequireComponent(typeof(HelicopterSimulation.FuelController))]
-  [RequireComponent(typeof(HelicopterSimulation.EngineController))]
-  [RequireComponent(typeof(HelicopterSimulation.FlightControlsPhysicsController))]
-  [RequireComponent(typeof(HelicopterSimulation.FlightControlsPositionController))]
-  [RequireComponent(typeof(HelicopterSimulation.FlightPlanController))]
-  [RequireComponent(typeof(HelicopterSimulation.MfdRangeController))]
-  [RequireComponent(typeof(HelicopterSimulation.TawsImageController))]
+
   public class HelicopterSetup : MonoBehaviour {
 
     // The purpose of this script is to automatically add the required scripts to the GameObject
