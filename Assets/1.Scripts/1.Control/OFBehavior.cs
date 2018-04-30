@@ -12,7 +12,8 @@ public class OFBehavior : NetworkBehaviour {
 			gameObject.GetComponentInChildren<MoveBehaviour>().enabled = true;
 			gameObject.GetComponentInChildren<BasicBehaviour>().enabled = true;
 			gameObject.GetComponentInChildren<LanternBehavior>().enabled = true;
-		}
+            gameObject.GetComponentInChildren<AudioListener>().enabled = true;
+        }
 		else
 		{
 			return;

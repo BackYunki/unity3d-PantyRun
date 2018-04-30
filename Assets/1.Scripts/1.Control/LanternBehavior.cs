@@ -7,25 +7,19 @@ public class LanternBehavior : NetworkBehaviour {
 
     private bool isActive = false;
     public AudioClip toggleSfx;
-
+    private AudioSource audio;
+	// Update is called once per frame
     void Start()
     {
-        if(isLocalPlayer)
-        {
-            this.gameObject.GetComponentInChildren<Camera>().enabled = true;
-        }
-        else
-        {
-            this.gameObject.GetComponentInChildren<Camera>().enabled = false;
-        }
+        audio = GetComponent<AudioSource>();
     }
 
-	// Update is called once per frame
 	void Update () {
         if (isLocalPlayer && Input.GetKeyDown("e"))
         {
             isActive = !isActive;
             GetComponentInChildren<Light>().enabled = isActive;
+            audio.PlayOneShot(toggleSfx);
         }
     }
 }

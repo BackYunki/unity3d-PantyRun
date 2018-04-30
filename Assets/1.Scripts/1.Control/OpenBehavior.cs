@@ -5,7 +5,6 @@ using UnityEngine.Networking;
 
 public class OpenBehavior : NetworkBehaviour
 {
-
     private Animator _animator;
     private bool isOpen = false;
     private bool isEnter = false;
