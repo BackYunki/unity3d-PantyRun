@@ -7,11 +7,11 @@ public class LanternBehavior : NetworkBehaviour {
 
     private bool isActive = false;
     public AudioClip toggleSfx;
-    private AudioSource audio;
+    private new AudioSource audio;
 	// Update is called once per frame
     void Start()
     {
-        audio = GetComponent<AudioSource>();
+        audio = this.gameObject.GetComponent<AudioSource>();
     }
 
 	void Update () {

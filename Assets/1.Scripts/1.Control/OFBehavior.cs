@@ -13,6 +13,7 @@ public class OFBehavior : NetworkBehaviour {
 			gameObject.GetComponentInChildren<BasicBehaviour>().enabled = true;
 			gameObject.GetComponentInChildren<LanternBehavior>().enabled = true;
             gameObject.GetComponentInChildren<AudioListener>().enabled = true;
+            GameObject.FindWithTag("NetworkManager").GetComponentInChildren<AudioSource>().enabled = true;
         }
 		else
 		{

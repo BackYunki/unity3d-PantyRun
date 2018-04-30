@@ -6,7 +6,6 @@ using UnityEngine.Networking;
 // MoveBehaviour inherits from GenericBehaviour. This class corresponds to basic walk and run behaviour, it is the default behaviour.
 public class MoveBehaviour : GenericBehaviour
 {
-
     public float walkSpeed = 0.15f;                 // Default walk speed.
 	public float runSpeed = 1.0f;                   // Default run speed.
 	public float sprintSpeed = 2.0f;                // Default sprint speed.
@@ -20,6 +19,11 @@ public class MoveBehaviour : GenericBehaviour
 	private int groundedBool;                       // Animator variable related to whether or not the player is on ground.
 	private bool jump;                              // Boolean to determine whether or not the player started a jump.
 	private bool isColliding;                       // Boolean to determine if the player has collided with an obstacle.
+
+    public bool IsMoving()
+    {
+        return speed > 0 ? true : false;
+    }
 
 	// Start is always called after any Awake functions.
 	void Start() 
@@ -61,8 +65,8 @@ public class MoveBehaviour : GenericBehaviour
         // Start a new jump.
         if (jump && !behaviourManager.GetAnim.GetBool(jumpBool) && behaviourManager.IsGrounded())
 		{
-			// Set jump related parameters.
-			behaviourManager.LockTempBehaviour(this.behaviourCode);
+            // Set jump related parameters.
+            behaviourManager.LockTempBehaviour(this.behaviourCode);
 			behaviourManager.GetAnim.SetBool(jumpBool, true);
 			// Is a locomotion jump?
 			if(behaviourManager.GetAnim.GetFloat(speedFloat) > 0.1)
@@ -75,7 +79,7 @@ public class MoveBehaviour : GenericBehaviour
 				velocity = Mathf.Sqrt(velocity);
 				behaviourManager.GetRigidBody.AddForce(Vector3.up * velocity, ForceMode.VelocityChange);
 			}
-		}
+        }
 		// Is already jumping?
 		else if (behaviourManager.GetAnim.GetBool(jumpBool))
 		{
