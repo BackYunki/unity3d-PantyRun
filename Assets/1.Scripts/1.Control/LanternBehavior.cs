@@ -18,7 +18,8 @@ public class LanternBehavior : NetworkBehaviour {
         if (isLocalPlayer && Input.GetKeyDown("e"))
         {
             isActive = !isActive;
-            GetComponentInChildren<Light>().enabled = isActive;
+            GetComponentsInChildren<Light>()[0].enabled = isActive;
+            GetComponentsInChildren<Light>()[1].enabled = isActive;
             audio.PlayOneShot(toggleSfx);
         }
     }
