@@ -9,7 +9,7 @@ public class ThirdPersonOrbitCamBasic : MonoBehaviour
 	public float smooth = 10f;                                         // Speed of camera responsiveness.
 	public float horizontalAimingSpeed = 6f;                           // Horizontal turn speed.
 	public float verticalAimingSpeed = 6f;                             // Vertical turn speed.
-	public float maxVerticalAngle = 30f;                               // Camera max clamp angle. 
+	public float maxVerticalAngle = 89f;                               // Camera max clamp angle. 
 	public float minVerticalAngle = -60f;                              // Camera min clamp angle.
 	public string XAxis = "Analog X";                                  // The default horizontal axis input name.
 	public string YAxis = "Analog Y";                                  // The default vertical axis input name.
