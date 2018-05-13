@@ -6,6 +6,7 @@ public class flaregun : MonoBehaviour {
 	public Rigidbody flareBullet;
 	public Transform barrelEnd;
 	public GameObject muzzleParticles;
+    public GameObject callAble;
 	public AudioClip flareShotSound;
 	public AudioClip noAmmoSound;	
 	public AudioClip reloadSound;	
@@ -13,7 +14,7 @@ public class flaregun : MonoBehaviour {
 	public int maxSpareRounds = 1;
 	public int spareRounds = 0;
 	public int currentRound = 0;
-	
+    public int heliDelayTime = 2;
 	
 
 
@@ -30,6 +31,7 @@ public class flaregun : MonoBehaviour {
 		{
 			if(currentRound > 0){
 				Shoot();
+                Invoke("call_Helicopter", heliDelayTime);
 			}else{
 				GetComponent<Animation>().Play("noAmmo");
 				GetComponent<AudioSource>().PlayOneShot(noAmmoSound);
@@ -38,7 +40,6 @@ public class flaregun : MonoBehaviour {
 		if(Input.GetKeyDown(KeyCode.R) && !GetComponent<Animation>().isPlaying)
 		{
 			Reload();
-			
 		}
 	
 	}
@@ -77,4 +78,11 @@ public class flaregun : MonoBehaviour {
 		}
 		
 	}
+
+
+    void call_Helicopter()
+    {
+        callAble.SetActive(true);
+        callAble.GetComponent<loapDown>().enabled = true;
+    }
 }
