@@ -4,16 +4,13 @@ using UnityEngine;
 
 public class loapDown : MonoBehaviour {
 
-    GameObject loap;
+    public GameObject loap;
     float currentLength = 0;
     float loapSize = 8;
     float loapSpeed = 0.01f;
-
-	// Use this for initialization
+    
 	void OnEnable () {
-
-        loap = GameObject.Find("cable_end");
-
+        
         InvokeRepeating("loapdown", 0, loapSpeed);
         
 	}
@@ -27,6 +24,7 @@ public class loapDown : MonoBehaviour {
         if(currentLength >= loapSize)
         {
             CancelInvoke();
+            this.enabled = false;
         }
     }
 	

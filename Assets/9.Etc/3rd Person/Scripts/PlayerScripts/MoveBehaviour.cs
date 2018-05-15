@@ -20,9 +20,16 @@ public class MoveBehaviour : GenericBehaviour
 	private bool jump;                              // Boolean to determine whether or not the player started a jump.
 	private bool isColliding;                       // Boolean to determine if the player has collided with an obstacle.
 
+    private bool isHangingOnTheLoap = false;
+
     public bool IsMoving()
     {
         return speed > 0 ? true : false;
+    }
+
+    public void setHanging(bool hang)
+    {
+        isHangingOnTheLoap = hang;
     }
 
 	// Start is always called after any Awake functions.
@@ -52,11 +59,18 @@ public class MoveBehaviour : GenericBehaviour
 	// LocalFixedUpdate overrides the virtual function of the base class.
 	public override void LocalFixedUpdate()
 	{
-        // Call the basic movement manager.
-        MovementManagement(behaviourManager.GetH, behaviourManager.GetV);
+        if (isHangingOnTheLoap)
+        {
 
-		// Call the jump manager.
-		JumpManagement();
+        }
+        else
+        {
+            // Call the basic movement manager.
+            MovementManagement(behaviourManager.GetH, behaviourManager.GetV);
+
+            // Call the jump manager.
+            JumpManagement();
+        }
 	}
 
 	// Execute the idle and walk/run jump movements.
