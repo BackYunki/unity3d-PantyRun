@@ -57,9 +57,6 @@ GameObject:
   - component: {fileID: 95141685529697738}
   - component: {fileID: 65190955255216928}
   - component: {fileID: 82052204953739334}
-  - component: {fileID: 114052728881461830}
-  - component: {fileID: 114486580716176510}
-  - component: {fileID: 114806237339260488}
   m_Layer: 0
   m_Name: SideDoor Right
   m_TagString: Untagged
@@ -599,69 +596,3 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
---- !u!114 &114052728881461830
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1472493112689558}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fee0b8c9443b5974cb218c4ec31afb49, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  openSfx: {fileID: 8300000, guid: 92f5a76cb0130f342abc86119cbf87f0, type: 3}
-  closeSfx: {fileID: 8300000, guid: 6c878a7eb3feac546b3df010da54a3de, type: 3}
---- !u!114 &114486580716176510
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1472493112689558}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 372142912, guid: dc443db3e92b4983b9738c1131f555cb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_SceneId:
-    m_Value: 0
-  m_AssetId:
-    i0: 199
-    i1: 91
-    i2: 62
-    i3: 125
-    i4: 244
-    i5: 14
-    i6: 195
-    i7: 228
-    i8: 234
-    i9: 89
-    i10: 221
-    i11: 30
-    i12: 174
-    i13: 94
-    i14: 160
-    i15: 104
-  m_ServerOnly: 0
-  m_LocalPlayerAuthority: 0
---- !u!114 &114806237339260488
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1472493112689558}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: -1768714887, guid: dc443db3e92b4983b9738c1131f555cb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_TransformSyncMode: 1
-  m_SendInterval: 0.1
-  m_SyncRotationAxis: 7
-  m_RotationSyncCompression: 0
-  m_SyncSpin: 0
-  m_MovementTheshold: 0.001
-  m_VelocityThreshold: 0.0001
-  m_SnapThreshold: 5
-  m_InterpolateRotation: 1
-  m_InterpolateMovement: 1

@@ -57,9 +57,6 @@ GameObject:
   - component: {fileID: 95319707606919480}
   - component: {fileID: 65056167731732290}
   - component: {fileID: 82422823261623340}
-  - component: {fileID: 114037977116473830}
-  - component: {fileID: 114875281195532444}
-  - component: {fileID: 114319859983499004}
   m_Layer: 0
   m_Name: Door Right2
   m_TagString: Untagged
@@ -599,69 +596,3 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
---- !u!114 &114037977116473830
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1252438342662820}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fee0b8c9443b5974cb218c4ec31afb49, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  openSfx: {fileID: 8300000, guid: 92f5a76cb0130f342abc86119cbf87f0, type: 3}
-  closeSfx: {fileID: 8300000, guid: 6c878a7eb3feac546b3df010da54a3de, type: 3}
---- !u!114 &114319859983499004
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1252438342662820}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: -1768714887, guid: dc443db3e92b4983b9738c1131f555cb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_TransformSyncMode: 1
-  m_SendInterval: 0.1
-  m_SyncRotationAxis: 7
-  m_RotationSyncCompression: 0
-  m_SyncSpin: 0
-  m_MovementTheshold: 0.001
-  m_VelocityThreshold: 0.0001
-  m_SnapThreshold: 5
-  m_InterpolateRotation: 1
-  m_InterpolateMovement: 1
---- !u!114 &114875281195532444
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1252438342662820}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 372142912, guid: dc443db3e92b4983b9738c1131f555cb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_SceneId:
-    m_Value: 0
-  m_AssetId:
-    i0: 42
-    i1: 52
-    i2: 200
-    i3: 60
-    i4: 3
-    i5: 66
-    i6: 59
-    i7: 100
-    i8: 233
-    i9: 225
-    i10: 60
-    i11: 74
-    i12: 133
-    i13: 246
-    i14: 198
-    i15: 74
-  m_ServerOnly: 0
-  m_LocalPlayerAuthority: 0
