@@ -1,0 +1,216 @@
+fileFormatVersion: 2
+guid: 656124a519c0b6a4cafafcfe86949d64
+timeCreated: 1526433612
+licenseType: Free
+ModelImporter:
+  serializedVersion: 22
+  fileIDToRecycleName:
+    100000: board
+    100002: boarder
+    100004: Box076
+    100006: Box077
+    100008: Box078
+    100010: Box079
+    100012: Box080
+    100014: Box081
+    100016: Box082
+    100018: Box083
+    100020: Box084
+    100022: Box085
+    100024: Box086
+    100026: Box087
+    100028: Box088
+    100030: Box089
+    100032: Box090
+    100034: Box091
+    100036: Box092
+    100038: Box093
+    100040: Box094
+    100042: //RootNode
+    100044: drawers
+    100046: Object001
+    100048: Object002
+    100050: Object003
+    400000: board
+    400002: boarder
+    400004: Box076
+    400006: Box077
+    400008: Box078
+    400010: Box079
+    400012: Box080
+    400014: Box081
+    400016: Box082
+    400018: Box083
+    400020: Box084
+    400022: Box085
+    400024: Box086
+    400026: Box087
+    400028: Box088
+    400030: Box089
+    400032: Box090
+    400034: Box091
+    400036: Box092
+    400038: Box093
+    400040: Box094
+    400042: //RootNode
+    400044: drawers
+    400046: Object001
+    400048: Object002
+    400050: Object003
+    2100000: No Name
+    2300000: board
+    2300002: boarder
+    2300004: Box076
+    2300006: Box077
+    2300008: Box078
+    2300010: Box079
+    2300012: Box080
+    2300014: Box081
+    2300016: Box082
+    2300018: Box083
+    2300020: Box084
+    2300022: Box085
+    2300024: Box086
+    2300026: Box087
+    2300028: Box088
+    2300030: Box089
+    2300032: Box090
+    2300034: Box091
+    2300036: Box092
+    2300038: Box093
+    2300040: Box094
+    2300042: drawers
+    2300044: Object001
+    2300046: Object002
+    2300048: Object003
+    3300000: board
+    3300002: boarder
+    3300004: Box076
+    3300006: Box077
+    3300008: Box078
+    3300010: Box079
+    3300012: Box080
+    3300014: Box081
+    3300016: Box082
+    3300018: Box083
+    3300020: Box084
+    3300022: Box085
+    3300024: Box086
+    3300026: Box087
+    3300028: Box088
+    3300030: Box089
+    3300032: Box090
+    3300034: Box091
+    3300036: Box092
+    3300038: Box093
+    3300040: Box094
+    3300042: drawers
+    3300044: Object001
+    3300046: Object002
+    3300048: Object003
+    4300000: Box078
+    4300002: Box086
+    4300004: Box083
+    4300006: Box084
+    4300008: Box094
+    4300010: Box081
+    4300012: Box082
+    4300014: Box090
+    4300016: Box089
+    4300018: Box088
+    4300020: Box087
+    4300022: Box080
+    4300024: Box077
+    4300026: Box079
+    4300028: Box085
+    4300030: Box092
+    4300032: Box093
+    4300034: board
+    4300036: Box076
+    4300038: Box091
+    4300040: boarder
+    4300042: drawers
+    4300044: Object003
+    4300046: Object002
+    4300048: Object001
+    9500000: //RootNode
+  externalObjects: {}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
