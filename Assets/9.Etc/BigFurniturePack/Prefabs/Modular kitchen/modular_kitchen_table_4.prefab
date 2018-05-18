@@ -93,6 +93,7 @@ GameObject:
   - component: {fileID: 400010}
   - component: {fileID: 3300008}
   - component: {fileID: 2300008}
+  - component: {fileID: 65026657877238794}
   m_Layer: 0
   m_Name: tabletop
   m_TagString: Untagged
@@ -191,9 +192,9 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100000}
-  m_LocalRotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: -34.01, y: 6.6003, z: 2.2941003}
-  m_LocalScale: {x: 1, y: 1, z: 0.78396994}
+  m_LocalRotation: {x: -0.5, y: 0.5, z: 0.5, w: 0.5}
+  m_LocalPosition: {x: -35.186996, y: 6.63, z: -4.42}
+  m_LocalScale: {x: 1.1929784, y: 1.1929784, z: 0.93525916}
   m_Children:
   - {fileID: 400002}
   - {fileID: 400020}
@@ -207,7 +208,7 @@ Transform:
   - {fileID: 400014}
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: -90.00001, y: 90, z: 0}
 --- !u!4 &400002
 Transform:
   m_ObjectHideFlags: 1
@@ -759,3 +760,15 @@ Prefab:
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 100000}
   m_IsPrefabParent: 1
+--- !u!65 &65026657877238794
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100010}
+  m_Material: {fileID: 13400000, guid: 3fa64caba2a1bde4faefdc867c08a62e, type: 2}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 3.977786, y: 108.722565, z: 59.940735}
+  m_Center: {x: 0.0000028014244, y: 0.00025558472, z: -0.00005340577}
