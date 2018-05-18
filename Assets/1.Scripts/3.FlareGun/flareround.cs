@@ -1,7 +1,8 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.Networking;
 
-public class flareround : MonoBehaviour {
+public class flareround : NetworkBehaviour {
 	private GameObject flaregun;
 	private flaregun flare;
 	public AudioClip pickupSound;	
@@ -11,8 +12,6 @@ public class flareround : MonoBehaviour {
 	{
 		flaregun = GameObject.Find("flaregun");
 		flare = flaregun.GetComponent<flaregun>();
-		
-	
 	}
 	
 	// Update is called once per frame

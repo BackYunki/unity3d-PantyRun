@@ -59,6 +59,6 @@ public class loapUp : MonoBehaviour {
             yield return new WaitForSeconds(0.01f);
         }
 
-        SceneManager.LoadScene(2);
+        SceneManager.LoadScene(3);
     }
 }

@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 11400000}
   - component: {fileID: 13600000}
   - component: {fileID: 8200000}
+  - component: {fileID: 114449871270217750}
   m_Layer: 0
   m_Name: flareround
   m_TagString: Untagged
@@ -141,7 +142,7 @@ AudioSource:
       tangentMode: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
-    m_RotationOrder: 4
+    m_RotationOrder: 0
   reverbZoneMixCustomCurve:
     serializedVersion: 2
     m_Curve:
@@ -190,3 +191,35 @@ Prefab:
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 100000}
   m_IsPrefabParent: 1
+--- !u!114 &114449871270217750
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100000}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 372142912, guid: dc443db3e92b4983b9738c1131f555cb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_SceneId:
+    m_Value: 0
+  m_AssetId:
+    i0: 211
+    i1: 80
+    i2: 225
+    i3: 210
+    i4: 136
+    i5: 157
+    i6: 191
+    i7: 20
+    i8: 25
+    i9: 42
+    i10: 114
+    i11: 236
+    i12: 70
+    i13: 158
+    i14: 97
+    i15: 153
+  m_ServerOnly: 0
+  m_LocalPlayerAuthority: 0

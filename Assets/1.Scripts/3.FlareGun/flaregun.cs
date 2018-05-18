@@ -2,7 +2,7 @@
 using System.Collections;
 using UnityEngine.Networking;
 
-public class flaregun : MonoBehaviour {
+public class flaregun : NetworkBehaviour {
 	
 	public Rigidbody flareBullet;
 	public Transform barrelEnd;
