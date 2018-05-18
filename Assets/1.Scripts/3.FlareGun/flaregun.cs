@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.Networking;
 
 public class flaregun : MonoBehaviour {
 	
@@ -17,13 +18,11 @@ public class flaregun : MonoBehaviour {
     public int heliDelayTime = 2;
 	
 
-
-	// Use this for initialization
+    
 	void Start () {
 	
 	}
 	
-	// Update is called once per frame
 	void Update () 
 	{
 		
@@ -46,29 +45,35 @@ public class flaregun : MonoBehaviour {
 	
 	void Shoot()
 	{
-			currentRound--;
+		currentRound--;
 		if(currentRound <= 0){
 			currentRound = 0;
 		}
-		
-		
-		
-			GetComponent<Animation>().CrossFade("Shoot");
-			GetComponent<AudioSource>().PlayOneShot(flareShotSound);
-		
-			
-			Rigidbody bulletInstance;			
-			bulletInstance = Instantiate(flareBullet,barrelEnd.position,barrelEnd.rotation) as Rigidbody; //INSTANTIATING THE FLARE PROJECTILE
-			
-			
-			bulletInstance.AddForce(barrelEnd.forward * bulletSpeed); //ADDING FORWARD FORCE TO THE FLARE PROJECTILE
-			
-			Instantiate(muzzleParticles, barrelEnd.position,barrelEnd.rotation);	//INSTANTIATING THE GUN'S MUZZLE SPARKS	
-           
-		
-	}
-	
-	void Reload()
+        
+        CmdShoot();
+
+    }
+
+    [Command]
+    void CmdShoot() {
+        RpcShoot();
+    }
+
+    [ClientRpc]
+    void RpcShoot()
+    {
+        GetComponent<Animation>().CrossFade("Shoot");
+        GetComponent<AudioSource>().PlayOneShot(flareShotSound);
+
+        Rigidbody bulletInstance;
+        bulletInstance = Instantiate(flareBullet, barrelEnd.position, barrelEnd.rotation) as Rigidbody; //INSTANTIATING THE FLARE PROJECTILE
+
+        bulletInstance.AddForce(barrelEnd.forward * bulletSpeed); //ADDING FORWARD FORCE TO THE FLARE PROJECTILE
+
+        Instantiate(muzzleParticles, barrelEnd.position, barrelEnd.rotation);   //INSTANTIATING THE GUN'S MUZZLE SPARKS	
+    }
+
+    void Reload()
 	{
 		if(spareRounds >= 1 && currentRound == 0){
 			GetComponent<AudioSource>().PlayOneShot(reloadSound);			

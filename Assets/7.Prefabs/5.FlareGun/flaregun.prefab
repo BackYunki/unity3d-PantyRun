@@ -43,6 +43,7 @@ GameObject:
   - component: {fileID: 11100000}
   - component: {fileID: 11400000}
   - component: {fileID: 8200000}
+  - component: {fileID: 114664155260042406}
   m_Layer: 0
   m_Name: flaregun
   m_TagString: Untagged
@@ -134,7 +135,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100004}
   m_LocalRotation: {x: 0.04406637, y: -0.85336536, z: 0.5142752, w: 0.07312178}
-  m_LocalPosition: {x: -29.624044, y: 9.800002, z: 4.122134}
+  m_LocalPosition: {x: -29.538, y: 10.756, z: 4.62}
   m_LocalScale: {x: 0.1, y: 0.1, z: 0.09999999}
   m_Children:
   - {fileID: 400006}
@@ -468,7 +469,7 @@ MonoBehaviour:
   maxSpareRounds: 1
   spareRounds: 0
   currentRound: 0
-  heliDelayTime: 2
+  heliDelayTime: 5
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1
@@ -480,3 +481,35 @@ Prefab:
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 100004}
   m_IsPrefabParent: 1
+--- !u!114 &114664155260042406
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100004}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 372142912, guid: dc443db3e92b4983b9738c1131f555cb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_SceneId:
+    m_Value: 0
+  m_AssetId:
+    i0: 221
+    i1: 219
+    i2: 99
+    i3: 53
+    i4: 82
+    i5: 158
+    i6: 177
+    i7: 148
+    i8: 248
+    i9: 55
+    i10: 53
+    i11: 192
+    i12: 132
+    i13: 47
+    i14: 255
+    i15: 79
+  m_ServerOnly: 0
+  m_LocalPlayerAuthority: 0
