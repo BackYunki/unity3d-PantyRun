@@ -36,7 +36,7 @@ public class flaregun : NetworkBehaviour {
 				GetComponent<AudioSource>().PlayOneShot(noAmmoSound);
 			}
 		}
-		if(Input.GetKeyDown(KeyCode.R) && !GetComponent<Animation>().isPlaying)
+		if(Input.GetKeyDown(KeyCode.R) && !GetComponent<Animation>().isPlaying && enable)
 		{
 			Reload();
 		}
