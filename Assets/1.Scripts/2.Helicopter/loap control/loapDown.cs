@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class loapDown : MonoBehaviour {
+public class LoapDown : MonoBehaviour {
 
     public GameObject loap;
     float currentLength = 0;
@@ -11,11 +11,11 @@ public class loapDown : MonoBehaviour {
     
 	void OnEnable () {
         
-        InvokeRepeating("loapdown", 0, loapSpeed);
+        InvokeRepeating("Loapdown", 0, loapSpeed);
         
 	}
 
-    void loapdown()
+    void Loapdown()
     {
 
         currentLength += loapSpeed;

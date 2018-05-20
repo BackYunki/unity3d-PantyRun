@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 8200000}
   - component: {fileID: 114449871270217750}
   m_Layer: 0
-  m_Name: flareround
+  m_Name: Flareround
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

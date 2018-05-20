@@ -16,8 +16,8 @@ public class flaregun : NetworkBehaviour {
 	public int spareRounds = 0;
 	public int currentRound = 0;
     public int heliDelayTime = 2;
-	
 
+    bool enable = false;
     
 	void Start () {
 	
@@ -26,11 +26,11 @@ public class flaregun : NetworkBehaviour {
 	void Update () 
 	{
 		
-		if(Input.GetButtonDown("Fire1") && !GetComponent<Animation>().isPlaying)
+		if(Input.GetButtonDown("Fire1") && !GetComponent<Animation>().isPlaying && enable)
 		{
 			if(currentRound > 0){
 				Shoot();
-                Invoke("call_Helicopter", heliDelayTime);
+                Invoke("Call_Helicopter", heliDelayTime);
 			}else{
 				GetComponent<Animation>().Play("noAmmo");
 				GetComponent<AudioSource>().PlayOneShot(noAmmoSound);
@@ -85,9 +85,9 @@ public class flaregun : NetworkBehaviour {
 	}
 
 
-    void call_Helicopter()
+    void Call_Helicopter()
     {
         callAble.SetActive(true);
-        callAble.GetComponent<loapDown>().enabled = true;
+        callAble.GetComponent<LoapDown>().enabled = true;
     }
 }

@@ -22,8 +22,10 @@ GameObject:
   - component: {fileID: 33033601646936992}
   - component: {fileID: 23967812336341102}
   - component: {fileID: 95634045082203556}
+  - component: {fileID: 65621244446227280}
+  - component: {fileID: 114450506090263294}
   m_Layer: 0
-  m_Name: TaserGun
+  m_Name: tasergun
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -36,7 +38,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1057426267391956}
   m_LocalRotation: {x: 0.00000008146034, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -32.750454, y: 6.707, z: 6.406}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -83,6 +85,18 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1057426267391956}
   m_Mesh: {fileID: 4300000, guid: 43b08d553116f044e9bf8ad49ded30d6, type: 3}
+--- !u!65 &65621244446227280
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1057426267391956}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0.0032983832, y: 0, z: -0.0005249372}
 --- !u!95 &95634045082203556
 Animator:
   serializedVersion: 3
@@ -100,3 +114,15 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &114450506090263294
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1057426267391956}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5bb961fd64695cc418541e7d47b67dca, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pickupSound: {fileID: 8300000, guid: f27dd859701e20140ada74e809779ed9, type: 3}

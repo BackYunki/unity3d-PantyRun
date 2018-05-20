@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class loapUp : MonoBehaviour {
+public class LoapUp : MonoBehaviour {
 
     public GameObject loap;
 
@@ -24,7 +24,7 @@ public class loapUp : MonoBehaviour {
         
         is_entered = true;
         //check loap is down
-        is_down = !GetComponentInParent<loapDown>().enabled;
+        is_down = !GetComponentInParent<LoapDown>().enabled;
 
         if (!is_down)
         {
@@ -52,7 +52,7 @@ public class loapUp : MonoBehaviour {
     IEnumerator Delay()
     {
         
-        while (transform.localPosition.y < -1)
+        while (transform.localPosition.y < -1.5f)
         {
             transform.Translate(0, loapSpeed, 0);
             player.transform.Translate(0, loapSpeed, 0);

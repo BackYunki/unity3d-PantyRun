@@ -44,8 +44,9 @@ GameObject:
   - component: {fileID: 11400000}
   - component: {fileID: 8200000}
   - component: {fileID: 114664155260042406}
+  - component: {fileID: 65178566332979826}
   m_Layer: 0
-  m_Name: flaregun
+  m_Name: Flaregun
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -467,7 +468,7 @@ MonoBehaviour:
   reloadSound: {fileID: 8300000, guid: 83c52e0124588cb41b7c1c200f457a50, type: 3}
   bulletSpeed: 2000
   maxSpareRounds: 1
-  spareRounds: 0
+  spareRounds: 1
   currentRound: 0
   heliDelayTime: 5
 --- !u!1001 &100100000
@@ -481,6 +482,18 @@ Prefab:
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 100004}
   m_IsPrefabParent: 1
+--- !u!65 &65178566332979826
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100004}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 10, y: 10, z: 10}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &114664155260042406
 MonoBehaviour:
   m_ObjectHideFlags: 1

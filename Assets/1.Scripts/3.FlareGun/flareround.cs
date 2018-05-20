@@ -6,19 +6,13 @@ public class flareround : NetworkBehaviour {
 	private GameObject flaregun;
 	private flaregun flare;
 	public AudioClip pickupSound;	
-
-	// Use this for initialization
+    
 	void Start () 
 	{
-		flaregun = GameObject.Find("flaregun");
+		flaregun = GameObject.Find("Flaregun");
 		flare = flaregun.GetComponent<flaregun>();
 	}
-	
-	// Update is called once per frame
-	void Update () {
-	
-	}
-	
+		
 	void OnTriggerEnter(Collider other)
 	{
 		
