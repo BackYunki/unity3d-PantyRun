@@ -641,9 +641,9 @@ PlayerSettings:
     UNet: 1
   facebookSdkVersion: 7.9.4
   apiCompatibilityLevel: 2
-  cloudProjectId: 52bbdee5-c876-48a7-ab3e-3abb12ba7689
-  projectName: PPANS RUN (1)
-  organizationId: bongusriceburger
+  cloudProjectId: 52118a75-88f9-4940-b783-01b75b18a90f
+  projectName: PPANS RUN
+  organizationId: dongb94
   cloudEnabled: 0
   enableNativePlatformBackendsForNewInputSystem: 0
   disableOldInputManagerSupport: 0

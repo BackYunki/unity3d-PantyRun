@@ -34,8 +34,8 @@ public class OpenBehavior : NetworkBehaviour
             isEnter = false;
         }
     }
-
-    void Update()
+    
+    private void LateUpdate()
     {
         if (isEnter && Input.GetKeyDown("f"))
         {

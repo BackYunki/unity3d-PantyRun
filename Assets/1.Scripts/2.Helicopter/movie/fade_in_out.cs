@@ -8,7 +8,6 @@ public class fade_in_out : MonoBehaviour
     float fade_in = 0.0f;
     float fade_out = 1.0f;
     float fades = 1.0f;
-    float time = 0;
 
     bool is_fade_in = false;
 

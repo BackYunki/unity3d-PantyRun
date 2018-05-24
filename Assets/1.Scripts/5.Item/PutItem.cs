@@ -40,7 +40,7 @@ public class PutItem : MonoBehaviour {
         if (Input.GetKeyDown("f") && enable)
         {
             int i=0;
-            while (i<20)
+            while (i<inventory.item.Length)
             {
                 if (itemName.Equals(inventory.item[i]))
                 {

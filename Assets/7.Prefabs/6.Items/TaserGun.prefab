@@ -26,7 +26,7 @@ GameObject:
   - component: {fileID: 114450506090263294}
   - component: {fileID: 82370133247804320}
   m_Layer: 0
-  m_Name: TaserGun
+  m_Name: tasergun
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
