@@ -2,15 +2,18 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Networking;
+using UnityEngine.Networking.NetworkSystem;
 
 public class OpenBehavior : NetworkBehaviour
 {
     private Animator _animator;
+    [SyncVar]
     private bool isOpen = false;
     private bool isEnter = false;
     public AudioClip openSfx;
     public AudioClip closeSfx;
     private new AudioSource audio;
+    const short Door = 1001;
 
     // Use this for initialization
     void Start()
@@ -35,21 +38,33 @@ public class OpenBehavior : NetworkBehaviour
         }
     }
     
+
+    [ClientCallback]
     private void LateUpdate()
     {
         if (isEnter && Input.GetKeyDown("f"))
         {
-            isOpen = !isOpen;   // 누를 때마다 상태를 바꾸는 거당
-            if (isOpen)
+            foreach (NetworkClient client in NetworkClient.allClients)
             {
-                _animator.SetBool("isOpen", true);
-                audio.PlayOneShot(openSfx);
+                StringMessage msg = new StringMessage(name);
+                client.Send(Door,msg);
             }
-            else
-            {
-                _animator.SetBool("isOpen", false);
-                audio.PlayOneShot(closeSfx);
-            }
+        }
+    }
+
+    [Server]
+    public void DoorOpen()
+    {
+        isOpen = !isOpen;
+        if (isOpen)
+        {
+            _animator.SetBool("isOpen", true);
+            audio.PlayOneShot(openSfx);
+        }
+        else
+        {
+            _animator.SetBool("isOpen", false);
+            audio.PlayOneShot(closeSfx);
         }
     }
 }
