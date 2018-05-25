@@ -22,6 +22,8 @@ GameObject:
   - component: {fileID: 65137014971211352}
   - component: {fileID: 114503536474917648}
   - component: {fileID: 82486691924777240}
+  - component: {fileID: 114937845905436962}
+  - component: {fileID: 114241459413553132}
   m_Layer: 0
   m_Name: trap
   m_TagString: Untagged
@@ -278,6 +280,27 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 0
+--- !u!114 &114241459413553132
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1007069925054260}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -1768714887, guid: dc443db3e92b4983b9738c1131f555cb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_TransformSyncMode: 1
+  m_SendInterval: 0.1
+  m_SyncRotationAxis: 7
+  m_RotationSyncCompression: 0
+  m_SyncSpin: 0
+  m_MovementTheshold: 0.001
+  m_VelocityThreshold: 0.0001
+  m_SnapThreshold: 5
+  m_InterpolateRotation: 1
+  m_InterpolateMovement: 1
 --- !u!114 &114503536474917648
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -290,3 +313,35 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pickupSound: {fileID: 8300000, guid: f27dd859701e20140ada74e809779ed9, type: 3}
+--- !u!114 &114937845905436962
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1007069925054260}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 372142912, guid: dc443db3e92b4983b9738c1131f555cb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_SceneId:
+    m_Value: 0
+  m_AssetId:
+    i0: 98
+    i1: 89
+    i2: 77
+    i3: 87
+    i4: 238
+    i5: 78
+    i6: 117
+    i7: 36
+    i8: 106
+    i9: 9
+    i10: 169
+    i11: 62
+    i12: 134
+    i13: 246
+    i14: 246
+    i15: 51
+  m_ServerOnly: 0
+  m_LocalPlayerAuthority: 0

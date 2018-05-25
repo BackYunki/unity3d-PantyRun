@@ -13,13 +13,14 @@ public class OpenBehavior : NetworkBehaviour
     public AudioClip openSfx;
     public AudioClip closeSfx;
     private new AudioSource audio;
-    const short Door = 1001;
+    short Door;
 
     // Use this for initialization
     void Start()
     {
         _animator = GetComponent<Animator>();
         audio = GetComponent<AudioSource>();
+        Door = NetworksObjectControl.Door;
     }
 
     void OnTriggerEnter(Collider col)

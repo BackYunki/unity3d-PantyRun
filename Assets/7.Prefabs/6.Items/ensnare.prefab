@@ -23,6 +23,8 @@ GameObject:
   - component: {fileID: 65601567632962960}
   - component: {fileID: 114963760491348840}
   - component: {fileID: 82008496591718636}
+  - component: {fileID: 114197497203706810}
+  - component: {fileID: 114079207501317272}
   m_Layer: 0
   m_Name: ensnare
   m_TagString: Untagged
@@ -512,6 +514,59 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &114079207501317272
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1078822381377924}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -1768714887, guid: dc443db3e92b4983b9738c1131f555cb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_TransformSyncMode: 1
+  m_SendInterval: 0.1
+  m_SyncRotationAxis: 7
+  m_RotationSyncCompression: 0
+  m_SyncSpin: 0
+  m_MovementTheshold: 0.001
+  m_VelocityThreshold: 0.0001
+  m_SnapThreshold: 5
+  m_InterpolateRotation: 1
+  m_InterpolateMovement: 1
+--- !u!114 &114197497203706810
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1078822381377924}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 372142912, guid: dc443db3e92b4983b9738c1131f555cb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_SceneId:
+    m_Value: 0
+  m_AssetId:
+    i0: 253
+    i1: 95
+    i2: 179
+    i3: 164
+    i4: 21
+    i5: 189
+    i6: 220
+    i7: 180
+    i8: 88
+    i9: 172
+    i10: 40
+    i11: 226
+    i12: 3
+    i13: 21
+    i14: 103
+    i15: 102
+  m_ServerOnly: 0
+  m_LocalPlayerAuthority: 0
 --- !u!114 &114963760491348840
 MonoBehaviour:
   m_ObjectHideFlags: 1

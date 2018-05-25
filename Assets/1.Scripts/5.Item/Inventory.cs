@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Inventory : MonoBehaviour {
     public enum Item{flaregun, heist, ensnare, tasergun, clocking, spray, trap, key, id_card}
-    public string[] item = { "flaregun", "heist", "ensnare", "tasergun", "clocking", "spray", "trap", "key", "id_card" };
+    public string[] item = { "flaregunbox", "heist", "ensnare", "tasergun", "clocking", "spray", "trap", "key", "id_card" };
     bool[] hasItem = { false , false, false , false , false , false , false , false, false };
     int itemNum = 0;
     int oldNum = 0;

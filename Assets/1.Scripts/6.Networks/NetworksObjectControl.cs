@@ -6,9 +6,17 @@ using UnityEngine.Networking.NetworkSystem;
 
 public class NetworksObjectControl : NetworkBehaviour {
 
-	// Use this for initialization
-	void Start () {
-        NetworkServer.RegisterHandler(1001, DoorOpen);
+    public const short Door = 1001;
+    public const short PutItem = 1002;
+    public const short OpenBox = 1003;
+    public const short GetGun = 1004;
+
+    // Use this for initialization
+    void Start () {
+        NetworkServer.RegisterHandler(Door, DoorOpen);
+        NetworkServer.RegisterHandler(PutItem, PickUpItem);
+        NetworkServer.RegisterHandler(OpenBox, OpentheBox);
+        NetworkServer.RegisterHandler(GetGun, GetAGun);
     }
 	
 	// Update is called once per frame
@@ -17,16 +25,31 @@ public class NetworksObjectControl : NetworkBehaviour {
 	}
 
     [Server]
-    private void dd(NetworkMessage msg)
-    {
-        Debug.Log("Network");
-    }
-
-    [Server]
-    void DoorOpen(NetworkMessage msg)
+    private void DoorOpen(NetworkMessage msg)
     {
         OpenBehavior ob = GameObject.Find(msg.ReadMessage<StringMessage>().value).GetComponent<OpenBehavior>();
 
         ob.DoorOpen();
+    }
+
+    [Server]
+    private void PickUpItem(NetworkMessage msg)
+    {
+        PutItem put = GameObject.Find(msg.ReadMessage<StringMessage>().value).GetComponent<PutItem>();
+        put.DestroyItem();
+    }
+
+    [Server]
+    private void OpentheBox(NetworkMessage msg)
+    {
+        OpenBox bx = GameObject.Find(msg.ReadMessage<StringMessage>().value).GetComponent<OpenBox>();
+        bx.OpenTheBox();
+    }
+
+    [Server]
+    private void GetAGun(NetworkMessage msg)
+    {
+        OpenBox bx = GameObject.Find(msg.ReadMessage<StringMessage>().value).GetComponent<OpenBox>();
+        bx.GetGun();
     }
 }
