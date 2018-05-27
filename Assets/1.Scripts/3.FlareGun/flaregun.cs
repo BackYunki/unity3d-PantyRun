@@ -17,7 +17,7 @@ public class flaregun : NetworkBehaviour {
 	public int currentRound = 0;
     public int heliDelayTime = 2;
 
-    bool enable = false;
+    bool enable = true;
     
 	void Start () {
 	

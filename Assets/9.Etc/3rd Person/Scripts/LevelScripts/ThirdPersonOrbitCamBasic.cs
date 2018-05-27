@@ -32,7 +32,8 @@ public class ThirdPersonOrbitCamBasic : MonoBehaviour
 
 	void Awake()
 	{
-        Cursor.visible = false;
+        Cursor.lockState = CursorLockMode.Locked;
+        //Cursor.visible = flase;
 		// Reference to the camera transform.
 		cam = transform;
 

@@ -18,7 +18,7 @@ public class MoveBehaviour : GenericBehaviour
 	private int jumpBool;                           // Animator variable related to jumping.
 	private int groundedBool;                       // Animator variable related to whether or not the player is on ground.
 	private bool jump;                              // Boolean to determine whether or not the player started a jump.
-	private bool isColliding;                       // Boolean to determine if the player has collided with an obstacle.
+	private bool isColliding;                       // Boolean to determwwwine if the player has collided with an obstacle.
 
     private bool isHangingOnTheLoap = false;
 

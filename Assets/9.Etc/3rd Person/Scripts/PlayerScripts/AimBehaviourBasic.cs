@@ -6,9 +6,9 @@ public class AimBehaviourBasic : GenericBehaviour
 {
 	public string aimButton = "Aim", shoulderButton = "Aim Shoulder";     // Default aim and switch shoulders buttons.
 	public Texture2D crosshair;                                           // Crosshair texture.
-	public float aimTurnSmoothing = 0.15f;                                // Speed of turn response when aiming to match camera facing.
+	public float aimTurnSmoothing = 0.30f;                                // Speed of turn response when aiming to match camera facing.
 	public Vector3 aimPivotOffset = new Vector3(0.5f, 1.2f,  0f);         // Offset to repoint the camera when aiming.
-	public Vector3 aimCamOffset   = new Vector3(0f, 0.4f, -0.7f);         // Offset to relocate the camera when aiming.
+	public Vector3 aimCamOffset   = new Vector3(3f, 0.0f, 0f);         // Offset to relocate the camera when aiming.
 
 	private int aimBool;                                                  // Animator variable related to aiming.
 	private bool aim;                                                     // Boolean to determine whether or not the player is aiming.

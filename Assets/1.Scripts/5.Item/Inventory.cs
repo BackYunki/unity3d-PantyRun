@@ -5,6 +5,7 @@ using UnityEngine;
 public class Inventory : MonoBehaviour {
     public enum Item{flaregun, heist, ensnare, tasergun, clocking, spray, trap, key, id_card}
     public string[] item = { "flaregun", "heist", "ensnare", "tasergun", "clocking", "spray", "trap", "key", "id_card" };
+    SocketBehavior PlayerSocket;
     bool[] hasItem = { false , false, false , false , false , false , false , false, false };
     int itemNum = 0;
     int oldNum = 0;
@@ -14,12 +15,18 @@ public class Inventory : MonoBehaviour {
     private void Start()
     {
         Canvas = GameObject.Find("Canvas");
+        
     }
     void Update () {
         if (Input.GetButtonDown("item")) {
             SwapItem();
         }
 	}
+
+    public void SetSocket(SocketBehavior socket)
+    {
+        PlayerSocket = socket;
+    }
 
     public void PutItem(int num)
     {
@@ -28,6 +35,9 @@ public class Inventory : MonoBehaviour {
         Enable();
         if (itemNum == oldNum) return;
         Disable();
+
+        if (PlayerSocket == null) return;
+        PlayerSocket.ItemView(num);
     }
 
     private void SwapItem()
@@ -43,6 +53,8 @@ public class Inventory : MonoBehaviour {
                 }
                 Enable();
                 Disable();
+                if (PlayerSocket == null) return;
+                PlayerSocket.ItemView(itemNum);
                 break;
             }
         }
