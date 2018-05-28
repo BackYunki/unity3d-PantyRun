@@ -10,6 +10,7 @@ public class NetworksObjectControl : NetworkBehaviour {
     public const short PutItem = 1002;
     public const short OpenBox = 1003;
     public const short GetGun = 1004;
+    public const short ChangeItem = 1005;
 
     // Use this for initialization
     void Start () {
@@ -17,6 +18,7 @@ public class NetworksObjectControl : NetworkBehaviour {
         NetworkServer.RegisterHandler(PutItem, PickUpItem);
         NetworkServer.RegisterHandler(OpenBox, OpentheBox);
         NetworkServer.RegisterHandler(GetGun, GetAGun);
+        //NetworkServer.RegisterHandler(ChangeItem, HoldOnItems);
     }
 	
 	// Update is called once per frame
@@ -52,4 +54,16 @@ public class NetworksObjectControl : NetworkBehaviour {
         OpenBox bx = GameObject.Find(msg.ReadMessage<StringMessage>().value).GetComponent<OpenBox>();
         bx.GetGun();
     }
+
+
+
+    /*
+    [Server]
+    private void HoldOnItems(NetworkMessage msg)
+    {
+        SocketBehavior socket = msg.ReadMessage<NetworkObjectMessage>().obj.GetComponent<SocketBehavior>();
+        Debug.Log(socket.name);
+        socket.HoldOnItem(msg.ReadMessage<NetworkObjectMessage>().int_msg);
+    }
+    */
 }
