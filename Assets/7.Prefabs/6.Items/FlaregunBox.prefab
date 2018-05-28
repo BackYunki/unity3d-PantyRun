@@ -260,7 +260,7 @@ GameObject:
   - component: {fileID: 114477069855227732}
   - component: {fileID: 114760549092275718}
   m_Layer: 0
-  m_Name: flaregunbox
+  m_Name: FlaregunBox
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
