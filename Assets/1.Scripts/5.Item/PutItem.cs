@@ -14,13 +14,7 @@ public class PutItem : NetworkBehaviour
 
     private void Start()
     {
-        foreach(GameObject player in GameObject.FindGameObjectsWithTag("Player"))
-        {
-            if (player.GetComponent<NetworkIdentity>().isLocalPlayer)
-            {
-                inventory = player.GetComponent<Inventory>();
-            }
-        }
+        inventory = GameObject.Find("Canvas").GetComponent<Inventory>();
         itemName = gameObject.name;
         itemName = itemName.Split(' ')[0];
         putItem = NetworksObjectControl.PutItem;

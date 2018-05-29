@@ -3,10 +3,9 @@ using System.Collections;
 using UnityEngine.Networking;
 
 public class flaregun : NetworkBehaviour {
-
+	
 	public Rigidbody flareBullet;
 	public Transform barrelEnd;
-    public Animation ani;
 	public GameObject muzzleParticles;
     public GameObject callAble;
 	public AudioClip flareShotSound;
@@ -18,28 +17,30 @@ public class flaregun : NetworkBehaviour {
 	public int currentRound = 0;
     public int heliDelayTime = 2;
 
-    public bool enable = false;
-
+    bool enable = true;
+    
 	void Start () {
-        callAble = GameObject.Find("Helicopter");
+	
 	}
 	
 	void Update () 
 	{
-		if(Input.GetButtonDown("Fire1") && !ani.isPlaying && enable)
+		
+		if(Input.GetButtonDown("Fire1") && !GetComponent<Animation>().isPlaying && enable)
 		{
 			if(currentRound > 0){
 				Shoot();
                 Invoke("Call_Helicopter", heliDelayTime);
 			}else{
-                ani.Play("noAmmo");
+				GetComponent<Animation>().Play("noAmmo");
 				GetComponent<AudioSource>().PlayOneShot(noAmmoSound);
 			}
 		}
-		if(Input.GetKeyDown(KeyCode.R) && !ani.isPlaying && enable)
+		if(Input.GetKeyDown(KeyCode.R) && !GetComponent<Animation>().isPlaying && enable)
 		{
 			Reload();
 		}
+	
 	}
 	
 	void Shoot()
@@ -61,7 +62,7 @@ public class flaregun : NetworkBehaviour {
     [ClientRpc]
     void RpcShoot()
     {
-        ani.CrossFade("Shoot");
+        GetComponent<Animation>().CrossFade("Shoot");
         GetComponent<AudioSource>().PlayOneShot(flareShotSound);
 
         Rigidbody bulletInstance;
@@ -78,7 +79,7 @@ public class flaregun : NetworkBehaviour {
 			GetComponent<AudioSource>().PlayOneShot(reloadSound);			
 			spareRounds--;
 			currentRound++;
-            ani.CrossFade("Reload");
+			GetComponent<Animation>().CrossFade("Reload");
 		}
 		
 	}

@@ -7,8 +7,8 @@ public class Inventory : MonoBehaviour {
     public string[] item = { "flaregun", "heist", "ensnare", "tasergun", "clocking", "spray", "trap", "key", "id_card" };
     SocketBehavior PlayerSocket;
     bool[] hasItem = { false , false, false , false , false , false , false , false, false };
-    int itemNum = -1;
-    int oldNum = -1;
+    int itemNum = 0;
+    int oldNum = 0;
     GameObject Canvas;
 
     // Update is called once per frame
@@ -35,7 +35,7 @@ public class Inventory : MonoBehaviour {
         Enable();
         if (itemNum == oldNum) return;
         Disable();
-        
+
         if (PlayerSocket == null) return;
         PlayerSocket.ItemView(num);
     }
@@ -68,7 +68,6 @@ public class Inventory : MonoBehaviour {
                 break;
             case (int)Item.flaregun:
                 Canvas.transform.Find("flaregun").gameObject.SetActive(true);
-                GetComponent<flaregun>().enable = true;
                 break;
             case (int)Item.heist:
                 Canvas.transform.Find("heist").gameObject.SetActive(true);
@@ -107,7 +106,6 @@ public class Inventory : MonoBehaviour {
             case (int)Item.flaregun:
                 Canvas.transform.Find("flaregun").gameObject.SetActive(false);
                 oldNum = itemNum;
-                GetComponent<flaregun>().enable = false;
                 break;
             case (int)Item.heist:
                 Canvas.transform.Find("heist").gameObject.SetActive(false);
