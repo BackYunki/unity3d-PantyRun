@@ -25,7 +25,7 @@ public class OpenBehavior : NetworkBehaviour
 
     void OnTriggerEnter(Collider col)
     {
-        if (col.tag == "Player")
+        if (col.tag == "Player" && col.GetComponent<OFBehavior>().isLocalPlayer)
         {
             isEnter = true;
         }
@@ -33,18 +33,30 @@ public class OpenBehavior : NetworkBehaviour
 
     void OnTriggerExit(Collider col)
     {
-        if (col.tag == "Player")
+        if (col.tag == "Player" && col.GetComponent<OFBehavior>().isLocalPlayer)
         {
             isEnter = false;
         }
     }
-    
 
     [ClientCallback]
     private void LateUpdate()
     {
         if (isEnter && Input.GetKeyDown("f"))
         {
+            if (name.Equals("DoorTop"))
+            {
+                foreach (GameObject player in GameObject.FindGameObjectsWithTag("Player"))
+                {
+                    if (player.GetComponent<OFBehavior>().isLocalPlayer)
+                    {
+                        if (!player.GetComponent<Inventory>().HasItem((int)Inventory.Item.id_card))
+                        {
+                            return;
+                        }
+                    }
+                }
+            }
             foreach (NetworkClient client in NetworkClient.allClients)
             {
                 StringMessage msg = new StringMessage(name);

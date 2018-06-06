@@ -7,22 +7,17 @@ using UnityEngine.Networking.NetworkSystem;
 public class SocketBehavior : NetworkBehaviour {
     public GameObject[] Items;
     int index=0;
-    short changeItem;
+    //short changeItem;
 
     private void Start()
     {
-        Debug.Log("start");
-        changeItem = NetworksObjectControl.ChangeItem;
-        Debug.Log("here");
-
-        
-        GameObject.Find("Canvas").GetComponent<Inventory>().SetSocket(this);
+        //changeItem = NetworksObjectControl.ChangeItem;
+        GetComponent<Inventory>().SetSocket(this);
     }
 
     public void ItemView(int index)
     {
-        ChangeItem(index);
-
+        CmdHoldOnItem(index);
         /*
         foreach (NetworkClient client in NetworkClient.allClients)
         {
@@ -33,13 +28,25 @@ public class SocketBehavior : NetworkBehaviour {
     }
 
     [Command]
-    public void ChangeItem(int index)
+    public void CmdItemUse()
     {
-        HoldOnItem(index);
+        RpcItemUse();
     }
 
     [ClientRpc]
-    public void HoldOnItem(int index)
+    public void RpcItemUse()
+    {
+        Items[index].SetActive(false);
+    }
+
+    [Command]
+    public void CmdHoldOnItem(int index)
+    {
+        RpcHoldOnItem(index);
+    }
+
+    [ClientRpc]
+    public void RpcHoldOnItem(int index)
     {
         Items[this.index].SetActive(false);
         Items[index].SetActive(true);

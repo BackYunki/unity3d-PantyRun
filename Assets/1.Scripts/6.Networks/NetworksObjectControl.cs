@@ -11,6 +11,7 @@ public class NetworksObjectControl : NetworkBehaviour {
     public const short OpenBox = 1003;
     public const short GetGun = 1004;
     public const short ChangeItem = 1005;
+    public const short HeilLopeUp = 1006;
 
     // Use this for initialization
     void Start () {

@@ -14,7 +14,7 @@ public class PutItem : NetworkBehaviour
 
     private void Start()
     {
-        inventory = GameObject.Find("Canvas").GetComponent<Inventory>();
+       
         itemName = gameObject.name;
         itemName = itemName.Split(' ')[0];
         putItem = NetworksObjectControl.PutItem;
@@ -44,6 +44,13 @@ public class PutItem : NetworkBehaviour
     {
         if (Input.GetKeyDown("f") && enable)
         {
+            foreach (GameObject player in GameObject.FindGameObjectsWithTag("Player"))
+            {
+                if (player.GetComponent<OFBehavior>().isLocalPlayer)
+                {
+                    inventory = player.GetComponent<Inventory>();
+                }
+            }
             int i=0;
             while (i<inventory.item.Length)
             {

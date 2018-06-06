@@ -7,8 +7,8 @@ public class Inventory : MonoBehaviour {
     public string[] item = { "flaregun", "heist", "ensnare", "tasergun", "clocking", "spray", "trap", "key", "id_card" };
     SocketBehavior PlayerSocket;
     bool[] hasItem = { false , false, false , false , false , false , false , false, false };
-    int itemNum = 0;
-    int oldNum = 0;
+    int itemNum = -1;
+    int oldNum = -1;
     GameObject Canvas;
 
     // Update is called once per frame
@@ -21,7 +21,29 @@ public class Inventory : MonoBehaviour {
         if (Input.GetButtonDown("item")) {
             SwapItem();
         }
+        if (Input.GetButtonDown("Fire1"))
+        {
+            if(!(itemNum==-1) && hasItem[itemNum])
+            {
+                UseItem();
+                
+            }
+            
+        }
+
 	}
+
+    public void UseItme()
+    {
+        Disable();
+        PlayerSocket.CmdItemUse();
+        hasItem[itemNum] = false;
+    }
+
+    public bool HasItem(int num)
+    {
+        return hasItem[num];
+    }
 
     public void SetSocket(SocketBehavior socket)
     {
@@ -35,7 +57,7 @@ public class Inventory : MonoBehaviour {
         Enable();
         if (itemNum == oldNum) return;
         Disable();
-
+        
         if (PlayerSocket == null) return;
         PlayerSocket.ItemView(num);
     }
@@ -68,6 +90,7 @@ public class Inventory : MonoBehaviour {
                 break;
             case (int)Item.flaregun:
                 Canvas.transform.Find("flaregun").gameObject.SetActive(true);
+                GetComponent<flaregun>().enable = true;
                 break;
             case (int)Item.heist:
                 Canvas.transform.Find("heist").gameObject.SetActive(true);
@@ -106,10 +129,12 @@ public class Inventory : MonoBehaviour {
             case (int)Item.flaregun:
                 Canvas.transform.Find("flaregun").gameObject.SetActive(false);
                 oldNum = itemNum;
+                GetComponent<flaregun>().enable = false;
                 break;
             case (int)Item.heist:
                 Canvas.transform.Find("heist").gameObject.SetActive(false);
                 oldNum = itemNum;
+
                 break;
             case (int)Item.ensnare:
                 Canvas.transform.Find("ensnare").gameObject.SetActive(false);
@@ -138,4 +163,41 @@ public class Inventory : MonoBehaviour {
         }
     }
 
+    private void UseItem()
+    {
+        switch (itemNum)
+        {
+            case -1:
+                break;
+            case (int)Item.flaregun:
+                GetComponent<flaregun>().UseItem();
+                break;
+            case (int)Item.heist:
+                GetComponent<Heist>().UseItem();
+                UseItme();
+                break;
+            case (int)Item.ensnare:
+                GetComponent<flaregun>().UseItem();
+                UseItme();
+                break;
+            case (int)Item.tasergun:
+                GetComponent<flaregun>().UseItem();
+                UseItme();
+                break;
+            case (int)Item.clocking:
+                GetComponent<Clocking>().UseItem();
+                UseItme();
+                break;
+            case (int)Item.spray:
+                GetComponent<flaregun>().UseItem();
+                UseItme();
+                break;
+            case (int)Item.trap:
+                GetComponent<flaregun>().UseItem();
+                UseItme();
+                break;
+            case (int)Item.key:
+                break;
+        }
+    }
 }

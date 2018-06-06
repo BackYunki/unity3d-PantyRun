@@ -52,13 +52,13 @@ public class LoapUp : MonoBehaviour {
     IEnumerator Delay()
     {
         
-        while (transform.localPosition.y < -1.5f)
+        while (transform.localPosition.y < -2f)
         {
             transform.Translate(0, loapSpeed, 0);
             player.transform.Translate(0, loapSpeed, 0);
             yield return new WaitForSeconds(0.01f);
         }
 
-        SceneManager.LoadScene(3);
+        SceneManager.LoadScene(AbstractScene.Ending);
     }
 }

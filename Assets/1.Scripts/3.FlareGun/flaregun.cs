@@ -3,11 +3,13 @@ using System.Collections;
 using UnityEngine.Networking;
 
 public class flaregun : NetworkBehaviour {
-	
+
 	public Rigidbody flareBullet;
 	public Transform barrelEnd;
+    public Animation ani;
 	public GameObject muzzleParticles;
     public GameObject callAble;
+    public GameObject cameraF;
 	public AudioClip flareShotSound;
 	public AudioClip noAmmoSound;	
 	public AudioClip reloadSound;	
@@ -17,31 +19,36 @@ public class flaregun : NetworkBehaviour {
 	public int currentRound = 0;
     public int heliDelayTime = 2;
 
-    bool enable = true;
-    
+    public bool enable = false;
+
 	void Start () {
-	
+        callAble = GameObject.Find("HelicopterParent").transform.Find("Helicopter").gameObject;
 	}
 	
 	void Update () 
 	{
-		
-		if(Input.GetButtonDown("Fire1") && !GetComponent<Animation>().isPlaying && enable)
-		{
-			if(currentRound > 0){
-				Shoot();
-                Invoke("Call_Helicopter", heliDelayTime);
-			}else{
-				GetComponent<Animation>().Play("noAmmo");
-				GetComponent<AudioSource>().PlayOneShot(noAmmoSound);
-			}
-		}
-		if(Input.GetKeyDown(KeyCode.R) && !GetComponent<Animation>().isPlaying && enable)
+		if(Input.GetKeyDown(KeyCode.R) && !ani.isPlaying && enable)
 		{
 			Reload();
 		}
-	
 	}
+
+    public void UseItem()
+    {
+        if (!ani.isPlaying && enable)
+        {
+            if (currentRound > 0)
+            {
+                Shoot();
+                Invoke("Call_Helicopter", heliDelayTime);
+            }
+            else
+            {
+                ani.Play("noAmmo");
+                GetComponent<AudioSource>().PlayOneShot(noAmmoSound);
+            }
+        }
+    }
 	
 	void Shoot()
 	{
@@ -62,13 +69,13 @@ public class flaregun : NetworkBehaviour {
     [ClientRpc]
     void RpcShoot()
     {
-        GetComponent<Animation>().CrossFade("Shoot");
+        ani.CrossFade("Shoot");
         GetComponent<AudioSource>().PlayOneShot(flareShotSound);
 
         Rigidbody bulletInstance;
         bulletInstance = Instantiate(flareBullet, barrelEnd.position, barrelEnd.rotation) as Rigidbody; //INSTANTIATING THE FLARE PROJECTILE
 
-        bulletInstance.AddForce(barrelEnd.forward * bulletSpeed); //ADDING FORWARD FORCE TO THE FLARE PROJECTILE
+        bulletInstance.AddForce(cameraF.transform.forward * bulletSpeed); //ADDING FORWARD FORCE TO THE FLARE PROJECTILE
 
         Instantiate(muzzleParticles, barrelEnd.position, barrelEnd.rotation);   //INSTANTIATING THE GUN'S MUZZLE SPARKS	
     }
@@ -79,7 +86,7 @@ public class flaregun : NetworkBehaviour {
 			GetComponent<AudioSource>().PlayOneShot(reloadSound);			
 			spareRounds--;
 			currentRound++;
-			GetComponent<Animation>().CrossFade("Reload");
+            ani.CrossFade("Reload");
 		}
 		
 	}

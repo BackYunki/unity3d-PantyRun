@@ -377,6 +377,8 @@ GameObject:
   - component: {fileID: 114050834772378412}
   - component: {fileID: 114155126308717566}
   - component: {fileID: 114759822370562324}
+  - component: {fileID: 114287821115552016}
+  - component: {fileID: 114434933697842212}
   m_Layer: 9
   m_Name: Helicopter_Demo
   m_TagString: Untagged
@@ -1540,7 +1542,7 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1251720728617576}
-  m_LocalRotation: {x: -0.60988706, y: 0.3578254, z: 0.35782343, w: 0.6098863}
+  m_LocalRotation: {x: -0.609887, y: 0.35782537, z: 0.3578234, w: 0.6098862}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -5436,6 +5438,27 @@ MonoBehaviour:
   engineSpeedDamping: 1
   engineRunningAtLoad: 1
   timeForFullEngineSpeed: 30
+--- !u!114 &114287821115552016
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1168286616459354}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -1768714887, guid: 870353891bb340e2b2a9c8707e7419ba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_TransformSyncMode: 3
+  m_SendInterval: 0.1
+  m_SyncRotationAxis: 7
+  m_RotationSyncCompression: 0
+  m_SyncSpin: 0
+  m_MovementTheshold: 0.001
+  m_VelocityThreshold: 0.0001
+  m_SnapThreshold: 5
+  m_InterpolateRotation: 1
+  m_InterpolateMovement: 1
 --- !u!114 &114293960738089728
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -5466,6 +5489,38 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   loap: {fileID: 1392370238714398}
+--- !u!114 &114434933697842212
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1168286616459354}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 372142912, guid: 870353891bb340e2b2a9c8707e7419ba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_SceneId:
+    m_Value: 0
+  m_AssetId:
+    i0: 197
+    i1: 84
+    i2: 35
+    i3: 135
+    i4: 224
+    i5: 42
+    i6: 121
+    i7: 36
+    i8: 74
+    i9: 144
+    i10: 63
+    i11: 47
+    i12: 119
+    i13: 155
+    i14: 160
+    i15: 97
+  m_ServerOnly: 0
+  m_LocalPlayerAuthority: 0
 --- !u!114 &114759822370562324
 MonoBehaviour:
   m_ObjectHideFlags: 1
