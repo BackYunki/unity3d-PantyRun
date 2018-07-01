@@ -3,7 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class FadingUI : MonoBehaviour {
+public class FadingUI : MonoBehaviour
+{
 
     public void FadeMe()
     {
@@ -13,7 +14,7 @@ public class FadingUI : MonoBehaviour {
     IEnumerator DoFade()
     {
         CanvasGroup canvasGroup = GetComponent<CanvasGroup>();
-        while(canvasGroup.alpha > 0)
+        while (canvasGroup.alpha > 0)
         {
             canvasGroup.alpha -= Time.deltaTime / 2;
             yield return null;
