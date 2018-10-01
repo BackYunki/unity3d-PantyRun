@@ -2,10 +2,9 @@
 
 ## Members & Main Work
 1. YunGi Baek [ 백윤기 ]
-> -Graphic and Sound Design
->> E-mail: phaethon5882@naver.com
->>
->> Homepage: http://168.131.153.171/wordpress
++ -Graphic and Sound Design
+  + E-mail: phaethon5882@naver.com
+  + Homepage: http://168.131.153.171/wordpress
 
 2. DongGun Byun [ 변동건 ]
 > -Game System Development
