@@ -4,7 +4,7 @@
 1. YunGi Baek [ 백윤기 ]
 + -Graphic and Sound Design
   + E-mail  : phaethon5882@naver.com
-  + Homepage: http://168.131.153.171/wordpress
+  + Homepage: http://yktw.wo.to
 
 2. DongGun Byun [ 변동건 ]
 + -Game System Development
