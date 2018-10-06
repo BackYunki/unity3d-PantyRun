@@ -2,19 +2,20 @@
 
 ## Members & Main Work
 1. YunGi Baek [ 백윤기 ]
-+ -Graphic and Sound Design
++ -Level Design & Network
   + E-mail  : phaethon5882@naver.com
-  + Homepage: www.yunki.tk
+  + 포트폴리오: www.portyunki.tk
+  + 홈페이지: www.yunki.tk
 
 2. DongGun Byun [ 변동건 ]
 + -Game System Development
   + E-mail  : dongb94@naver.com
-  + Homepage:
+  + 홈페이지:
 
 3. TaeKyung Oh [ 오태경 ]
 + -Network Synchronization development
   + E-mail  : 
-  + Homepage:
+  + 홈페이지:
 
 
 ## OpenSource: Coming Soon... 
