@@ -18,6 +18,5 @@
   + 홈페이지:
 
 
-## OpenSource: Coming Soon... 
 ### Youtube Link: https://www.youtube.com/watch?v=PA5VTGaVfek
 ### Chonnam National University In Republic of Korea
