@@ -4,8 +4,7 @@
 1. YunGi Baek [ 백윤기 ]
 + -Level Design & Network
   + E-mail  : phaethon5882@naver.com
-  + 포트폴리오: www.portyunki.tk
-  + 홈페이지: www.yunki.tk or www.yunki.ga
+  + 홈페이지: www.yunki.kr
 
 2. DongGun Byun [ 변동건 ]
 + -Game System Development
